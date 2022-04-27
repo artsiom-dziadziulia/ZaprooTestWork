@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <!-- Observer for Save Customer Session From Admin Area -->
+    <event name="adminhtml_customer_prepare_save">
+        <observer name="zaprooChangeAttributes" instance="Zaproo\TestWork\Observer\ChangeAttributes" />
+    </event>
+</config>

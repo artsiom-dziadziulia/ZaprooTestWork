@@ -1,0 +1,12 @@
+<?php
+declare(strict_types=1);
+
+/** @var $viewModel \Zaproo\TestWork\ViewModel\CustomerStatus */
+/** @var $block \Magento\Framework\View\Element\Template */
+
+$viewModel = $block->getViewModel();
+
+?>
+<?php if($viewModel->getStatus()): ?>
+<li class="greet welcome">Current Status: <?= $block->escapeHtml($viewModel->getStatus()); ?></li>
+<?php endif;?>

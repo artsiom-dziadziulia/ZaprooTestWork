@@ -1,0 +1,16 @@
+{
+  "customer_status": {
+    "column": {
+      "id": true,
+      "customer_id": true,
+      "status": true
+    },
+    "index": {
+      "CUSTOMER_STATUS_ID": true
+    },
+    "constraint": {
+      "PRIMARY": true,
+      "ZAPROO_CUSTOMER_STATUS_CUSTOMER_ENTITY": true
+    }
+  }
+}
