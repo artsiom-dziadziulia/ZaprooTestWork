@@ -46,6 +46,11 @@ class CustomerStatus implements ArgumentInterface
         return '';
     }
 
+    public function getLabel(): string
+    {
+        return __('Customer Status')->render();
+    }
+
     /**
      * @return string
      */

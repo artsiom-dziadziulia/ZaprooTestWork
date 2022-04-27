@@ -8,5 +8,23 @@ $viewModel = $block->getViewModel();
 
 ?>
 <?php if($viewModel->getStatus()): ?>
-<li class="greet welcome">Current Status: <?= $block->escapeHtml($viewModel->getStatus()); ?></li>
+    <li class="container" data-bind="scope: 'customer-status-updater'">
+        <span class="status" data-bind="text: captionText"></span><div class="amount" data-bind="text: status"></div>
+        <script type="text/x-magento-init">
+            {
+                "*": {
+                    "Magento_Ui/js/core/app": {
+                        "components": {
+                            "customer-status-updater": {
+                                "component": "Zaproo_TestWork/js/view/status",
+                                "captionText": "<?= $viewModel->getLabel() ?>",
+                                "status": "<?= $viewModel->getStatus() ?>"
+                            }
+                        }
+                    }
+                }
+            }
+
+        </script>
+    </li>
 <?php endif;?>
